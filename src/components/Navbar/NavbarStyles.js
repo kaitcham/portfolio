@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NavbarWrapper = styled.nav`
+export default styled.nav`
   height: 4rem;
   width: 100%;
   display: flex;
@@ -76,6 +76,10 @@ export const NavbarWrapper = styled.nav`
 
     .navbar__icons {
       display: flex;
+      background-color: transparent;
+      font-size: 2rem;
+      border: none;
+      cursor: pointer;
     }
   }
 `;
