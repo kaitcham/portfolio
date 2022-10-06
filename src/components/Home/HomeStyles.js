@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const HomeWrapper = styled.section`
+export default styled.section`
   height: 100%;
   display: flex;
   align-items: center;
