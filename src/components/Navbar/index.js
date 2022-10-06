@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { NavbarWrapper } from './NavbarStyles';
 import { CgMenu, CgClose } from 'react-icons/cg';
-import './NavbarStyles.js';
+import NavbarWrapper from './NavbarStyles';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOPen] = useState(false);
@@ -22,8 +21,8 @@ const Navbar = () => {
       <div className="navbar__logo">
         <Link
           to="home"
-          spy={true}
-          smooth={true}
+          spy
+          smooth
           duration={500}
           offset={-70}
           onClick={isMenuOpen && screenWidth < 768 ? handleClick : null}
@@ -36,8 +35,8 @@ const Navbar = () => {
           <li>
             <Link
               to="about"
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               duration={500}
               offset={-70}
               onClick={isMenuOpen && screenWidth < 768 ? handleClick : null}
@@ -48,8 +47,8 @@ const Navbar = () => {
           <li>
             <Link
               to="projects"
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               duration={500}
               offset={50}
               onClick={isMenuOpen && screenWidth < 768 ? handleClick : null}
@@ -60,8 +59,8 @@ const Navbar = () => {
           <li>
             <Link
               to="contact"
-              spy={true}
-              smooth={true}
+              spy
+              smooth
               duration={500}
               offset={50}
               onClick={isMenuOpen && screenWidth < 768 ? handleClick : null}
@@ -71,9 +70,9 @@ const Navbar = () => {
           </li>
         </ul>
       )}
-      <div className="navbar__icons" onClick={handleClick}>
+      <button type="button" className="navbar__icons" onClick={handleClick}>
         {isMenuOpen ? <CgClose /> : <CgMenu />}
-      </div>
+      </button>
     </NavbarWrapper>
   );
 };
