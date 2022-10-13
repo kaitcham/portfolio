@@ -15,7 +15,6 @@ const App = () => (
 
 const AppWrapper = styled.div`
   flex: 1;
-  margin-top: 4rem;
 `;
 
 export default App;
