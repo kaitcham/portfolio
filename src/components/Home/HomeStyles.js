@@ -3,17 +3,15 @@ import styled from 'styled-components';
 export default styled.section`
   height: 100%;
   display: flex;
+  padding: 0 6rem;
   align-items: center;
   justify-content: center;
-  padding: 0 6rem;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
 
   .social_media {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    position: relative;
     animation: tilt-shaking 0.5s forwards;
 
     .social_media_icon {
@@ -30,14 +28,15 @@ export default styled.section`
   .img_container {
     order: 1;
     position: relative;
-    bottom: 3rem;
-    opacity: 0;
+    bottom: 1.75rem;
     transform: translate(5rem, 7rem);
-    animation: fadeout 1.5s ease-in-out forwards;
+    animation: fadeOut 1.5s ease-in-out forwards;
 
     .profile_img {
-      width: 380px;
-      fill: #f3e4a0;
+      width: 30vw;
+      max-width: 380px;
+      min-width: 250px;
+      fill: hsl(250, 69%, 61%);
     }
 
     .picture {
@@ -69,14 +68,14 @@ export default styled.section`
 
     h1::before {
       background-color: #fff;
-      animation: typewriter 4s steps(16) 1s forwards;
+      animation: typewriter 3s steps(16) 1s forwards;
     }
 
     h1::after {
       width: 0.125rem;
       margin-left: 0.125rem;
       background-color: #000;
-      animation: typewriter 4s steps(16) 1s forwards,
+      animation: typewriter 3s steps(16) 1s forwards,
         blink 650ms steps(16) infinite;
     }
 
@@ -84,7 +83,7 @@ export default styled.section`
       font-size: 1.125rem;
       opacity: 0;
       transform: translateY(1rem);
-      animation: fadeInUp 2s ease 5.5s forwards;
+      animation: fadeInUp 2s ease 5s forwards;
     }
 
     button {
@@ -103,25 +102,38 @@ export default styled.section`
     }
   }
 
-  @keyframes tilt-shaking {
-    0% {
-      transform: rotate(0deg);
+  @media all and (max-width: 768px) {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 0 15px;
+    margin-top: 80px;
+
+    .social_media {
+      .social_media_icon {
+        font-size: 1.75rem;
+      }
     }
-    25% {
-      transform: rotate(5deg);
+
+    .img_container {
+      order: 0;
     }
-    50% {
-      transform: rotate(0eg);
-    }
-    75% {
-      transform: rotate(-5deg);
-    }
-    100% {
-      transform: rotate(0deg);
+
+    .intro {
+      padding: 0;
+      margin-top: 10px;
+
+      p {
+        margin-top: 10px;
+      }
+
+      button {
+        width: 100%;
+        margin-top: 50px;
+      }
     }
   }
 
-  @keyframes fadeout {
+  @keyframes fadeOut {
     to {
       opacity: 1;
       transform: translateY(0);
@@ -137,56 +149,6 @@ export default styled.section`
   @keyframes blink {
     to {
       background-color: transparent;
-    }
-  }
-
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    padding: 0 15px;
-
-    .social_media {
-      bottom: 2rem;
-      .social_media_icon {
-        font-size: 1.75rem;
-      }
-    }
-
-    .img_container {
-      order: 0;
-      bottom: 0;
-      opacity: 1;
-      margin-left: 2rem;
-      animation: tilt-shaking 0.55s forwards;
-
-      .profile_img {
-        width: 230px;
-      }
-    }
-
-    .intro {
-      padding: 0 15px;
-      margin-top: -100px;
-
-      h1 {
-        font-size: 1.75rem;
-      }
-
-      p {
-        font-size: 1.125rem;
-      }
-
-      button {
-        width: 100%;
-        font-size: 1.125rem;
-        margin-top: 50px;
-      }
     }
   }
 `;

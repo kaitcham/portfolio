@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FiGithub } from 'react-icons/fi';
-import profile from '../../assets/images/kaitcham.jpg';
+import profile from '../../assets/images/kaitcham.png';
 import HomeWrapper from './HomeStyles';
 
 const Home = () => (
