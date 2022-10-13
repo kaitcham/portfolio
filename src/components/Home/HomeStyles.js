@@ -116,6 +116,7 @@ export default styled.section`
 
     .img_container {
       order: 0;
+      transform: translate(0, 0);
     }
 
     .intro {
@@ -130,6 +131,13 @@ export default styled.section`
         width: 100%;
         margin-top: 50px;
       }
+    }
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
