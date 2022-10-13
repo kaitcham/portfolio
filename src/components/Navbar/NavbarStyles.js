@@ -1,85 +1,95 @@
 import styled from 'styled-components';
 
 export default styled.nav`
-  height: 4rem;
-  width: 100%;
   display: flex;
-  padding: 0 5rem;
-  position: fixed;
   align-items: center;
-  background-color: #fff;
   justify-content: space-between;
+  padding: 1rem 6rem;
   font-family: 'Poppins', sans-serif;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   .navbar__logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
-    a {
-      text-decoration: none;
-      color: #000;
-    }
+    color: rgb(63, 63, 65);
+  }
+
+  .navbar__icons {
+    display: none;
   }
 
   .navbar__links {
     display: flex;
     list-style: none;
-    li {
-      margin: 0 1rem;
-      a {
-        text-decoration: none;
-        color: #000;
-        font-size: 1rem;
-        font-weight: 500;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          color: #f50057;
-        }
-      }
-    }
   }
 
-  .navbar__icons {
-    font-size: 1.5rem;
-    cursor: pointer;
-    align-items: center;
-    display: none;
+  .navbar__links li {
+    margin-left: 2rem;
+  }
+
+  .navbar__links a {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgb(63, 63, 65);
+    text-decoration: none;
+  }
+
+  .navbar__links a::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 0;
+    background: red;
+    transition: width 0.7s ease, background-color 0.5s ease;
+  }
+
+  .navbar__links a:hover::after {
+    width: 100%;
+    background: #ffdd40;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0 1rem;
-    .navbar__links {
-      position: absolute;
-      top: 4rem;
-      left: 0;
-      flex-direction: column;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1rem;
+
+    .navbar__container {
       width: 100%;
-      height: auto;
-      background-color: #fff;
-      justify-content: flex-start;
-      align-items: flex-start;
-      transition: all 0.3s ease-in-out;
-      padding: 0 1rem;
-      li:first-child {
-        margin-top: 1.5rem;
-      }
-      li:last-child {
-        margin-bottom: 1.5rem;
-      }
-      li {
-        margin: 0.5rem 0;
-        a {
-          font-size: 1.5rem;
-        }
-      }
+    }
+
+    .navbar__logo {
+      font-size: 1.5rem;
     }
 
     .navbar__icons {
       display: flex;
-      background-color: transparent;
-      font-size: 2rem;
-      border: none;
-      cursor: pointer;
+      align-items: center;
+      border: transparent;
+      background: transparent;
+      font-size: 1.5rem;
+    }
+
+    .navbar__links {
+      display: none;
+    }
+
+    .navbar__links.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar__links.active li {
+      margin: 0.75rem 0;
+    }
+
+    .navbar__links.active a {
+      font-size: 1.25rem;
     }
   }
 `;
