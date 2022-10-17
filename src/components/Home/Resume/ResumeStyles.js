@@ -7,32 +7,35 @@ export default styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 
   .modal__container {
+    order: 1;
     width: 900px;
     height: 80vh;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 15px;
+    background-color: #fff;
   }
 
   .close__icon {
     color: #fff;
     font-size: 24px;
     font-weight: 600;
-    position: fixed;
-    top: 15px;
-    right: 15px;
+    margin-top: -45px;
+    margin-right: 15px;
     padding: 5px 15px;
     border: none;
     text-align: center;
     border-radius: 5px;
+    align-self: flex-end;
     background-color: #a59f9f;
     cursor: pointer;
 
@@ -46,6 +49,12 @@ export default styled.section`
   @media (max-width: 768px) {
     .modal__container {
       width: 90%;
+      margin-top: 0px;
+    }
+
+    .close__icon {
+      margin-right: 15px;
+      margin-bottom: 25px;
     }
   }
 `;
