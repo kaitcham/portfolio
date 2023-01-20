@@ -6,9 +6,51 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: hsl(240deg 6% 87%);
+  --secondary-color: #2563eb;
+}
+
+html,
+body,
 #root {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
+  height: 100%;
+}
+
+body {
+  background: #041525;
+  font-family: Poppins, sans-serif;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 600 18px Poppins, sans-serif;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.full-page {
+  height: 100%;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 }
