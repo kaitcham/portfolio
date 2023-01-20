@@ -1,20 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import styled from 'styled-components';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+import LandingPage from './pages/LandingPage';
 
 const App = () => (
-  <Router>
+  <BrowserRouter>
     <Navbar />
-    <AppWrapper>
-      <Home />
-    </AppWrapper>
-  </Router>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
+  </BrowserRouter>
 );
-
-const AppWrapper = styled.div`
-  flex: 1;
-`;
 
 export default App;
