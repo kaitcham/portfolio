@@ -8,6 +8,7 @@ const Wrapper = styled.header`
   justify-content: center;
 
   .container {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,17 +47,15 @@ const Wrapper = styled.header`
   }
 
   .nav-links {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 5rem;
     left: 0;
     width: 100%;
     padding: 15px;
-    height: calc(100vh - 5rem);
     background-color: #041525;
+    height: calc(100vh - 5rem);
     transition: all 0.3s linear;
-    transform: translateY(100%);
+    transform: translateX(-100%);
 
     li {
       margin: 0.5rem 0;
@@ -76,7 +75,7 @@ const Wrapper = styled.header`
   }
 
   .show-nav {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   .social-icons {
@@ -122,8 +121,9 @@ const Wrapper = styled.header`
       top: 0;
       left: 0;
       height: auto;
+      display: flex;
       flex-direction: row;
-      transform: translateY(0);
+      transform: translateX(0);
       background-color: transparent;
       li {
         margin-left: 1rem;
