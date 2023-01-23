@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.section`
   background: #041525eb;
-  height: calc(100vh - 5rem);
+  height: calc(100% - 5rem);
   .page {
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@ const Wrapper = styled.section`
   }
 
   .info {
-    margin-top: 1rem;
+    margin-top: 2rem;
     h1 {
       font-size: 2rem;
       font-weight: 700;
@@ -24,8 +24,8 @@ const Wrapper = styled.section`
     }
 
     p {
+      margin-top: 0.25rem;
       font-size: 1.0725rem;
-      margin-bottom: 1.5rem;
       color: hsl(240deg 6% 87%);
     }
   }
@@ -38,6 +38,7 @@ const Wrapper = styled.section`
     color: #fff;
     width: 100%;
     cursor: pointer;
+    margin-top: 2rem;
     font-size: 1.25rem;
     background: #3b82f6;
     border: transparent;
