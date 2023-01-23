@@ -14,8 +14,9 @@ const Wrapper = styled.section`
   .info {
     margin-top: 1rem;
     h1 {
-      font-weight: 700;
       font-size: 2rem;
+      font-weight: 700;
+      color: hsl(240deg 6% 87%);
       span {
         color: #3b82f6e0;
         margin-left: 0.25rem;
