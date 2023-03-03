@@ -43,9 +43,9 @@ const Wrapper = styled.section`
 
   @media all and (max-width: 768px) {
     padding: 0 15px;
-    /* h2 {
-      margin-bottom: 15px;
-    } */
+    h2 {
+      margin-top: 15px;
+    }
     .about-content {
       .about-image {
         display: none;
