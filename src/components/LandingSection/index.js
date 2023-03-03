@@ -6,7 +6,7 @@ import ResumeModal from '../../utils/Resume/ResumeModal';
 const HeroPage = () => {
   const [showModal, setShowModal] = useState(false);
   return (
-    <Wrapper className="full-page">
+    <Wrapper id="home" className="full-page">
       <div className="container page">
         <div className="info">
           <h1>

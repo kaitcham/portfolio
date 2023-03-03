@@ -2,10 +2,23 @@ import styled from 'styled-components';
 
 const Wrapper = styled.header`
   height: 5rem;
+  z-index: 999;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  ${({ scroll }) => {
+    if (scroll > 80) {
+      return `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #041525;
+      `;
+    }
+    return null;
+  }}
 
   .container {
     position: relative;
@@ -18,6 +31,7 @@ const Wrapper = styled.header`
     color: #0689d9;
     display: flex;
     font-size: 2rem;
+    cursor: pointer;
     align-items: center;
 
     & span {
@@ -69,6 +83,10 @@ const Wrapper = styled.header`
           border-bottom: 2px solid orange;
           transition: all 0.3s linear;
           cursor: pointer;
+        }
+
+        &.active {
+          border-bottom: 2px solid #0689d9;
         }
       }
     }
