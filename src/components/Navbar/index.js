@@ -37,7 +37,7 @@ const Navbar = () => {
         </Link>
         <nav className="navbar">
           <ul className={isMenuOpen ? 'nav-links show-nav' : 'nav-links'}>
-            <li>
+            {/* <li>
               <Link
                 spy
                 smooth
@@ -50,7 +50,7 @@ const Navbar = () => {
               >
                 About
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 spy
