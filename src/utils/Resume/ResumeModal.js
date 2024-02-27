@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { motion } from 'framer-motion';
 import { Worker, Viewer } from '@react-pdf-viewer/core';
 import { defaultLayoutPlugin } from '@react-pdf-viewer/default-layout';
-import pdfFile from '../../assets/pdf/Munezero Christian Resume.pdf';
+import pdfFile from '../../assets/pdf/Christian Munezero.pdf';
 import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 import ResumeWrapper from './ResumeStyles';
