@@ -66,6 +66,19 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link
+                spy
+                smooth
+                exact="true"
+                to="contact"
+                duration={500}
+                activeClass="active"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                Contact
+              </Link>
+            </li>
+            <li>
               <Link to="/blogs">Blogs</Link>
             </li>
           </ul>
