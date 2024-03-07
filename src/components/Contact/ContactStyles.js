@@ -3,7 +3,6 @@ import styled from 'styled-components';
 const Wrapper = styled.section`
   background: #6070ff;
   border-top-left-radius: 100px;
-  margin-top: 60px;
 
   .contact-form {
     display: flex;
