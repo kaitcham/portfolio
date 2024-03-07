@@ -37,20 +37,20 @@ const Navbar = () => {
         </Link>
         <nav className="navbar">
           <ul className={isMenuOpen ? 'nav-links show-nav' : 'nav-links'}>
-            {/* <li>
+            <li>
               <Link
                 spy
                 smooth
                 exact="true"
-                to="about"
-                offset={screenSize < 768 ? -123 : -80}
+                to="skills"
+                offset={screenSize < 768 ? -160 : -160}
                 duration={500}
                 activeClass="active"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                About
+                Skills
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 spy
