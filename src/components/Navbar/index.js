@@ -56,13 +56,13 @@ const Navbar = () => {
                 spy
                 smooth
                 exact="true"
-                to="portfolio"
+                to="projects"
                 offset={screenSize < 768 ? -123 : -80}
                 duration={500}
                 activeClass="active"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
-                Portfolio
+                Projects
               </Link>
             </li>
             <li>
@@ -78,9 +78,9 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/blogs">Blogs</Link>
-            </li>
+            </li> */}
           </ul>
           <div className="social-icons">
             <a
