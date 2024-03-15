@@ -1,16 +1,15 @@
+import attractive from '../assets/images/attractive.png';
+
 export default [
   {
     id: 1,
-    name: 'monishare',
-    image:
-      'https://res.cloudinary.com/drapvegx8/image/upload/v1710148011/Monishare_ojo02q.png',
+    name: 'attractive safaris',
+    image: attractive,
     description:
-      'A full-stack web application that allows its users to rent moni-cars.',
+      'A full-stack web application that allows its users to find information about the best places to visit in Rwanda.',
     github: '',
-    preview:
-      'http://prod.yellow.monishare.ojemba.s3-website.eu-central-1.amazonaws.com/',
+    preview: 'https://www.attractivesafaris.com/',
   },
-
   {
     id: 2,
     name: 'jobster',
@@ -21,7 +20,6 @@ export default [
     github: 'https://github.com/kaitcham/jobster',
     preview: 'https://kaitcham-jobster.netlify.app/',
   },
-
   {
     id: 3,
     name: 'comfy sloth',
@@ -52,12 +50,13 @@ export default [
   },
   {
     id: 6,
-    name: 'jobs API',
+    name: 'monishare',
     image:
-      'https://res.cloudinary.com/drapvegx8/image/upload/v1710160433/JobsAPI_ikplp4.png',
+      'https://res.cloudinary.com/drapvegx8/image/upload/v1710148011/Monishare_ojo02q.png',
     description:
-      'An API that allows its users to manage their job applications.',
-    github: 'https://github.com/kaitcham/jobs_api',
-    preview: 'https://jobsapi-l6pm.onrender.com/api-docs/#/',
+      'A full-stack web application that allows its users to rent moni-cars.',
+    github: '',
+    preview:
+      'http://prod.yellow.monishare.ojemba.s3-website.eu-central-1.amazonaws.com/',
   },
 ];
